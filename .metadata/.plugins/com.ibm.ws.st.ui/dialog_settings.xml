@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="com.ibm.ws.st.ui.internal.config.addConfigElementDialog.history">
+		<item value="properties.wasJms"/>
+		<item value="jmsActivationSpec"/>
+		<item value="basicRegistry"/>
+		<item value="cdi12"/>
+		<item value="dataSource"/>
+		<item value="jmsConnectionFactory"/>
+		<item value="jmsQueue"/>
+		<item value="messagingEngine"/>
+		<item value="queue"/>
+	</list>
+</section>

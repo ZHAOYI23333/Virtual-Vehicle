@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" hostname="localhost" id="Liberty Server at localhost" looseConfig="true" name="Liberty Server at localhost" publishWithError="true" runtime-id="Liberty Runtime" server-type="com.ibm.ws.st.server.wlp" server-type-id="com.ibm.ws.st.server.wlp" serverName="defaultServer" serverType="libertyServer" start-timeout="60" stop-timeout="15" stopOnShutdown="false" timestamp="49" userDirId="Liberty Runtime">
+    <list key="modules" value0="MyUsedCAR::org.eclipse.jst.jee.server:MyUsedCAR::jst.web::4.0" value1="MyUsedCar-InventoryManagement-EJBEAR::org.eclipse.jst.jee.server:MyUsedCar-InventoryManagement-EJBEAR::jst.ear::8.0" value2="MyUsedCar_NotificationApplication::org.eclipse.jst.jee.server:MyUsedCar_NotificationApplication::jst.web::4.0"/>
+  </server>
+</servers>
