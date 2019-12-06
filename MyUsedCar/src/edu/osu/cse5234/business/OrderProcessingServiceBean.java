@@ -92,7 +92,7 @@ public class OrderProcessingServiceBean {
     	for (LineItem it:lineitem) {
     		Item temp = new Item();
     		temp.setQuantity(it.getQuantity());
-    		temp.setId(it.getId());
+    		temp.setItemNumber(it.getItemNumber());
     		temp.setItemNumber(it.getItemNumber());
     		item.add(temp);
     	}

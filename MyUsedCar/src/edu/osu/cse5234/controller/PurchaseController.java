@@ -16,8 +16,6 @@ import edu.osu.cse5234.business.view.InventoryService;
 import edu.osu.cse5234.model.*;
 import edu.osu.cse5234.util.ServiceLocator;
 
-
-
 @Controller
 @RequestMapping("/purchase")
 public class PurchaseController {
@@ -40,7 +38,6 @@ public class PurchaseController {
 			it.setItemName(i.getName());
 			it.setItemNumber(i.getItemNumber());
 			it.setPrice(i.getUnitPrice());
-			it.setQuantity(0);
 			lineitems.add(it);
 		}
 		
@@ -52,16 +49,16 @@ public class PurchaseController {
 
 	@RequestMapping(path = "/submitItems", method = RequestMethod.POST)
 	public String submitItems(@ModelAttribute("order") Order order, HttpServletRequest request) {
+		
 		OrderProcessingServiceBean service = ServiceLocator.getOrderProcessingService();
-		
-//		request.getSession().setAttribute("order", order);
-//		return "redirect:/purchase/paymentEntry";
-		
+
 		if (service.validateItemAvailability(order)) {
-//			System.out.println(order.getItems().get(0).getQuantity());
+			
 			request.getSession().setAttribute("order", order);
 			return "redirect:/purchase/paymentEntry";
+			
 		}else {
+			
 			String message = "Please resubmit item quantities.";
 			request.getSession().setAttribute("message", message);
 			return "redirect:/purchase";
@@ -109,14 +106,6 @@ public class PurchaseController {
 
 	@RequestMapping(path = "/viewOrder", method = RequestMethod.GET)
 	public String viewOrder(HttpServletRequest request, HttpServletResponse response) {
-		
-//		Order order = (Order) request.getSession().getAttribute("order");
-//		PaymentInfo paymentInfo = (PaymentInfo) request.getSession().getAttribute("paymentInfo");
-//		ShippingInfo shipping = (ShippingInfo) request.getSession().getAttribute("shipping");
-//		
-//		request.setAttribute("order", order);
-//		request.setAttribute("payment", paymentInfo);
-//		request.setAttribute("shipping", shipping);
 
 		return "ViewOrder";
 	}
@@ -125,12 +114,9 @@ public class PurchaseController {
 	public String submitOrderEntryForm(boolean confirm, HttpServletRequest request) {
 	
 		Order order = (Order) request.getSession().getAttribute("order");
-//		order.setConfirmation(confirm);
+
 		System.out.println("Submit order entry: "+order.getItems().get(0).getItemName());
-		
-		
-		
-//		request.getSession().setAttribute("confirmcode", confirmcode);
+
 		request.getSession().setAttribute("order", order);	
 		
 		return "redirect:/purchase/viewConfirmation";
@@ -142,8 +128,8 @@ public class PurchaseController {
 		Order order = (Order) request.getSession().getAttribute("order");
 		PaymentInfo paymentInfo = (PaymentInfo) request.getSession().getAttribute("paymentInfo");
 		ShippingInfo shipping = (ShippingInfo) request.getSession().getAttribute("shipping");
-//		String confirmcode = (String) request.getSession().getAttribute("confirmcode");
 		
+		// update attributes in Order object
 		order.setPayment(paymentInfo);
 		order.setShipping(shipping);
 		order.setEmailAddress(shipping.getEmail());
@@ -153,6 +139,7 @@ public class PurchaseController {
 		request.setAttribute("order", order);
 		
 		OrderProcessingServiceBean service = ServiceLocator.getOrderProcessingService();
+		// The information of order is saved in database
 		String confirmcode = service.processOrder(order);
 		
 		request.setAttribute("payment", paymentInfo);

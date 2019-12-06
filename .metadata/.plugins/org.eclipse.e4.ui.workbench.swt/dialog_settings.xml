@@ -6,9 +6,20 @@
 		<item key="DIALOG_WIDTH" value="304"/>
 		<item key="DIALOG_HEIGHT" value="414"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
-		<item key="ShowViewDialog.STORE_SELECTED_VIEW_ID" value="org.eclipse.ui.console.ConsoleView"/>
+		<item key="ShowViewDialog.STORE_SELECTED_VIEW_ID" value="org.eclipse.wst.server.ui.ServersView"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="General"/>
+			<item value="Java"/>
+			<item value="Java Browsing"/>
+			<item value="JavaScript"/>
+			<item value="JavaServer Faces"/>
+			<item value="JPA"/>
+			<item value="Maven"/>
+			<item value="Migration"/>
+			<item value="Mylyn"/>
+			<item value="Oomph"/>
+			<item value="OSGi"/>
+			<item value="Server"/>
 		</list>
 	</section>
 </section>

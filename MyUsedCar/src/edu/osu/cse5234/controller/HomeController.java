@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/")
 public class HomeController {
-	@RequestMapping(path = "/home", method = RequestMethod.GET) 
+	@RequestMapping(path = "", method = RequestMethod.GET) 
 	public String viewHome(HttpServletRequest request, HttpServletResponse response) {
-		return "home";
+		return "redirect:/purchase";
 	}
 }

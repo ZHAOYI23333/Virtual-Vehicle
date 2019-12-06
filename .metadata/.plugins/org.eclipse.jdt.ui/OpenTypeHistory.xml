@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=MyUsedCAR/src&lt;edu.osu.cse5234.model{LineItem.java[LineItem" modifiers="1" timestamp="1572463913000"/>
-    <typeInfo handle="=MyUsedCAR/src&lt;edu.osu.cse5234.model{Order.java[Order" modifiers="1" timestamp="1572480960000"/>
-    <typeInfo handle="=MyUsedCAR/src&lt;edu.osu.cse5234.model{ShippingInfo.java[ShippingInfo" modifiers="1" timestamp="1572480925000"/>
+    <typeInfo handle="=MyUsedCAR/src&lt;edu.osu.cse5234.model{Order.java[Order" modifiers="1" timestamp="1574283662000"/>
+    <typeInfo handle="=MyUsedCAR/src&lt;edu.osu.cse5234.model{ShippingInfo.java[ShippingInfo" modifiers="1" timestamp="1575394554000"/>
     <typeInfo handle="=MyUsedCAR/src&lt;edu.osu.cse5234.model{PaymentInfo.java[PaymentInfo" modifiers="1" timestamp="1572463756000"/>
     <typeInfo handle="=MyUsedCar-InventoryManagement-EJBClient/ejbModule&lt;edu.osu.cse5234.model{Item.java[Item" modifiers="1" timestamp="1572468117000"/>
 </typeInfoHistroy>

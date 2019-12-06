@@ -66,10 +66,10 @@ public class ShippingInfo {
 	}
 	
 	public void setAddressLine2(String add2) {
-		this.addressLine1 = add2;
+		this.addressLine2 = add2;
 	}
 	public String getAddressLine2() {
-		return this.addressLine1;
+		return this.addressLine2;
 	}
 	
 	public void setCity(String city) {

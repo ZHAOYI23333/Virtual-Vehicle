@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="submitItems"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="home"/>
+			<item value="gradle"/>
 			<item value="submitItems"/>
 			<item value="process"/>
 			<item value="order"/>
@@ -21,8 +23,6 @@
 			<item value="name"/>
 			<item value="unitPrice"/>
 			<item value="data"/>
-			<item value="datasorce"/>
-			<item value="orders"/>
 		</list>
 		<list key="replacehistory">
 		</list>

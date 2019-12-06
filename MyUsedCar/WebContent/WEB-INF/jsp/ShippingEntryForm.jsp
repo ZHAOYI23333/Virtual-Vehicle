@@ -1,32 +1,75 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Shipping Entry</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Shipment</title>
+	</head>
 
-
-<form:form modelAttribute="shipping" method="post" action="submitShipping">    
-	<table>
+	<%@ include file="header.jsp" %>
+	
+	<body>
+		<h2 id='subtitle'>Please Enter Your Shipping Information</h2>
 		
-			<tr><td>Name: <form:input path="name" /></td></tr>
-			<tr><td>Address: <form:input path="addressLine1" /></td></tr>
-			<tr><td>Address Line2: <form:input path="addressLine2" /></td></tr>
-			<tr><td>State: <form:input path="city" /></td></tr>
-			<tr><td>City: <form:input path="state" /></td></tr>
-			<tr><td>Zip Code: <form:input path="zip" /></td></tr> 
-			<tr><td>Email Address: <form:input path="email" /></td></tr> 
-		
-		<tr>
-			<td colspan="2"><input type="submit" value="Confirm Address"></td>  
-		</tr>    
-	</table>
-</form:form>
-
-</body>
+		<div class="row">
+		  	<div class="col-md-6 col-md-offset-3" >
+			  	<form:form modelAttribute="shipping" method="post" action="submitShipping"> 
+			 
+					<div class="form-group"> 
+						<label>Name</label>
+						<form:input path="name" class="form-control" />
+						<small class="form-text text-muted">We'll never share your information with anyone else.</small>
+					</div>
+					
+					<div class="form-group">
+						<label>Address</label>
+						<form:input path="addressLine1" class="form-control" />
+						<small  class="form-text text-muted">We'll never share your information with anyone else.</small> 
+					</div>
+					
+					<div class="form-group">
+						<label>Address (second)</label>
+						<form:input path="addressLine2" class="form-control" />
+						<small class="form-text text-muted">We'll never share your information with anyone else.</small> 
+					</div>
+					
+					<div class="form-group">
+						<label>City</label>
+						<form:input path="city" class="form-control" />
+						<small  class="form-text text-muted">We'll never share your information with anyone else.</small> 
+					</div>
+					
+					<div class="form-group">
+						<label>State</label>
+						<form:input path="state" class="form-control" />
+						<small  class="form-text text-muted">We'll never share your information with anyone else.</small> 
+					</div>
+					
+					<div class="form-group">
+						<label>Country</label>
+						<form:input path="country" class="form-control" />
+						<small  class="form-text text-muted">We'll never share your information with anyone else.</small> 
+					</div>
+					
+					<div class="form-group">
+						<label>Postal Code</label>
+						<form:input path="zip" class="form-control" />
+						<small  class="form-text text-muted">We'll never share your information with anyone else.</small> 
+					</div>
+					
+					<div class="form-group">
+						<label>Email</label>
+						<form:input path="email" class="form-control" />
+						<small  class="form-text text-muted">We'll never share your information with anyone else.</small> 
+					</div>
+					
+					<div class="col-md-6 col-md-offset-4" >
+						<button type="submit" value="Comfirm Card" Class='btn btn-primary'>Comfirm Payment</button>
+					</div>	
+					  
+				</form:form>
+		  </div>
+		  
+		</div>
+	
+	</body>
 </html>

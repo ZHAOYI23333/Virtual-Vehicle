@@ -32,7 +32,7 @@ public class EmailProcessingServlet extends HttpServlet {
 	private JMSContext jmsContext;
 	
 	@Resource(lookup="jms/emailQ") 
-	private Queue queue;
+	private Queue<String> queue;
 	
 	
     /**
@@ -53,15 +53,15 @@ public class EmailProcessingServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		Message message = jmsContext.createConsumer((Destination) queue).receive(5000); 
 		if(message != null && message instanceof TextMessage) {
-		TextMessage textMessage = (TextMessage) message; 
-		try {
-		System.out.println("Received: " + textMessage.getText());
-		out.println("Received: " + textMessage.getText()); }
-		catch (JMSException e) {
-		out.println("Error: " + e.getMessage()); }
-		} else {
-		System.out.println("No or unknown message"); 
-		out.println("No or unknown message");
+			TextMessage textMessage = (TextMessage) message; 
+			try {
+			System.out.println("Received: " + textMessage.getText());
+			out.println("Received: " + textMessage.getText()); }
+			catch (JMSException e) {
+			out.println("Error: " + e.getMessage()); }
+			} else {
+			System.out.println("No or unknown message"); 
+			out.println("No or unknown message");
 			} 
 		}
 
