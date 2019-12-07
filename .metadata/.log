@@ -5643,3 +5643,104 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+!SESSION 2019-12-06 22:48:15.926 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=10.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/zhaoyi23333/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/zhaoyi23333/.eclipse_keyring
+
+!ENTRY com.ibm.issw.migr.osgi.liberty 4 0 2019-12-06 22:48:17.168
+!MESSAGE bundle com.ibm.issw.migr.osgi.liberty:1.0.0.201803091702 (1050)Component descriptor entry 'wsadmin.xml' not found
+
+!ENTRY com.ibm.issw.migr.osgi.wasconfig 4 0 2019-12-06 22:48:17.170
+!MESSAGE bundle com.ibm.issw.migr.osgi.wasconfig:1.0.0.201803091702 (1052)Component descriptor entry 'cell.xml' not found
+
+!ENTRY com.ibm.issw.migr.osgi.wasconfig.jboss 4 0 2019-12-06 22:48:17.172
+!MESSAGE bundle com.ibm.issw.migr.osgi.wasconfig.jboss:1.0.3.201803091702 (1053)Component descriptor entry 'component.xml' not found
+
+!ENTRY com.ibm.issw.migr.osgi.wasconfig.was 4 0 2019-12-06 22:48:17.173
+!MESSAGE bundle com.ibm.issw.migr.osgi.wasconfig.was:1.0.0.201803091702 (1054)Component descriptor entry 'cell.xml' not found
+
+!ENTRY com.ibm.issw.migr.osgi.wasconfig.wls 4 0 2019-12-06 22:48:17.175
+!MESSAGE bundle com.ibm.issw.migr.osgi.wasconfig.wls:1.0.0.201803091702 (1055)Component descriptor entry 'cell.xml' not found
+
+!ENTRY com.ibm.issw.migr.osgi.wsadmin 4 0 2019-12-06 22:48:17.176
+!MESSAGE bundle com.ibm.issw.migr.osgi.wsadmin:1.0.0.201803091702 (1056)Component descriptor entry 'wsadmin.xml' not found
+
+!ENTRY org.eclipse.core.net 1 0 2019-12-06 22:48:19.582
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2019-12-06 22:48:19.612
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.datatools.connectivity 4 10001 2019-12-07 00:20:16.582
+!MESSAGE /Users/zhaoyi23333/Documents/workspace/cse5234/.metadata/.plugins/org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb/db/META-INF/MANIFEST.MF (No such file or directory)
+!STACK 1
+org.eclipse.core.runtime.CoreException: /Users/zhaoyi23333/Documents/workspace/cse5234/.metadata/.plugins/org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb/db/META-INF/MANIFEST.MF (No such file or directory)
+	at org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb.internal.impl.SampleDbFactory.setInitializationData(SampleDbFactory.java:104)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:254)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.datatools.connectivity.internal.InternalProfileManager.initializeLocalDatabase(InternalProfileManager.java:1380)
+	at org.eclipse.datatools.connectivity.internal.InternalProfileManager.loadLocalRegisteredDatabases(InternalProfileManager.java:1360)
+	at org.eclipse.datatools.connectivity.internal.InternalProfileManager.loadProfiles(InternalProfileManager.java:1070)
+	at org.eclipse.datatools.connectivity.internal.InternalProfileManager.getProfiles(InternalProfileManager.java:150)
+	at org.eclipse.datatools.connectivity.ProfileManager.getProfiles(ProfileManager.java:48)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileFactory.buildConnectionProfile(DTPConnectionProfileFactory.java:53)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.GenericJpaDataSource.buildConnectionProfile(GenericJpaDataSource.java:135)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.GenericJpaDataSource.<init>(GenericJpaDataSource.java:63)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaFactory.buildJpaDataSource(AbstractJpaFactory.java:181)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.<init>(AbstractJpaProject.java:242)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.GenericJpaProject.<init>(GenericJpaProject.java:26)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaFactory.buildJpaProject(AbstractJpaFactory.java:177)
+	at org.eclipse.jpt.jpa.core.internal.jpa2.GenericJpaFactory2_0.buildJpaProject(GenericJpaFactory2_0.java:76)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildJpaProject(InternalJpaProjectManager.java:648)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildJpaProject(InternalJpaProjectManager.java:636)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildJpaProject(InternalJpaProjectManager.java:629)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.addJpaProject(InternalJpaProjectManager.java:610)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildJpaProject_(InternalJpaProjectManager.java:313)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$BuildJpaProjectCommand.execute(InternalJpaProjectManager.java:306)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: /Users/zhaoyi23333/Documents/workspace/cse5234/.metadata/.plugins/org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb/db/META-INF/MANIFEST.MF (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:299)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:238)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:188)
+	at org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb.internal.impl.SampleDbFactory.initSampleDb(SampleDbFactory.java:187)
+	at org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb.internal.impl.SampleDbFactory.setInitializationData(SampleDbFactory.java:88)
+	... 23 more
+!SUBENTRY 1 org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb 4 0 2019-12-07 00:20:16.583
+!MESSAGE /Users/zhaoyi23333/Documents/workspace/cse5234/.metadata/.plugins/org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb/db/META-INF/MANIFEST.MF (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /Users/zhaoyi23333/Documents/workspace/cse5234/.metadata/.plugins/org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb/db/META-INF/MANIFEST.MF (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:299)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:238)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:188)
+	at org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb.internal.impl.SampleDbFactory.initSampleDb(SampleDbFactory.java:187)
+	at org.eclipse.birt.report.data.oda.jdbc.dbprofile.sampledb.internal.impl.SampleDbFactory.setInitializationData(SampleDbFactory.java:88)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:254)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
+	at org.eclipse.datatools.connectivity.internal.InternalProfileManager.initializeLocalDatabase(InternalProfileManager.java:1380)
+	at org.eclipse.datatools.connectivity.internal.InternalProfileManager.loadLocalRegisteredDatabases(InternalProfileManager.java:1360)
+	at org.eclipse.datatools.connectivity.internal.InternalProfileManager.loadProfiles(InternalProfileManager.java:1070)
+	at org.eclipse.datatools.connectivity.internal.InternalProfileManager.getProfiles(InternalProfileManager.java:150)
+	at org.eclipse.datatools.connectivity.ProfileManager.getProfiles(ProfileManager.java:48)
+	at org.eclipse.jpt.jpa.db.internal.DTPConnectionProfileFactory.buildConnectionProfile(DTPConnectionProfileFactory.java:53)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.GenericJpaDataSource.buildConnectionProfile(GenericJpaDataSource.java:135)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.GenericJpaDataSource.<init>(GenericJpaDataSource.java:63)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaFactory.buildJpaDataSource(AbstractJpaFactory.java:181)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.<init>(AbstractJpaProject.java:242)
+	at org.eclipse.jpt.jpa.core.internal.jpa1.GenericJpaProject.<init>(GenericJpaProject.java:26)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaFactory.buildJpaProject(AbstractJpaFactory.java:177)
+	at org.eclipse.jpt.jpa.core.internal.jpa2.GenericJpaFactory2_0.buildJpaProject(GenericJpaFactory2_0.java:76)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildJpaProject(InternalJpaProjectManager.java:648)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildJpaProject(InternalJpaProjectManager.java:636)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildJpaProject(InternalJpaProjectManager.java:629)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.addJpaProject(InternalJpaProjectManager.java:610)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.buildJpaProject_(InternalJpaProjectManager.java:313)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$BuildJpaProjectCommand.execute(InternalJpaProjectManager.java:306)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

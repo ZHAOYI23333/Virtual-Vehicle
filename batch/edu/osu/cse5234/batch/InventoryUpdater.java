@@ -18,7 +18,7 @@ public class InventoryUpdater {
 	
 	private static Connection createConnection() throws SQLException, ClassNotFoundException {
 		Class.forName("org.h2.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:h2:~/myusedcar", "", "");
+		Connection conn = DriverManager.getConnection("jdbc:h2:/Users/zhaoyi23333/myusedcar", "sa", "");
 		return conn;
 	}
 	
